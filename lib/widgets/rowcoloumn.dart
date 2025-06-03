@@ -33,31 +33,28 @@ class MyWidget extends StatelessWidget {
 
         ),
 
-        body: Center(
-          child: Container(
-            //color: Colors.yellowAccent,
-            height: 300,
-            width: double.infinity,
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.all(20),
-            alignment:Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.purple,
-              border: Border.all(color: Colors.yellowAccent, width: 5),
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black,
-                  offset:Offset(5, 5),
-                  blurRadius: 20
-                )
-              ]
-
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue,
             ),
 
-            child: Text("Hello World", style: TextStyle(fontSize: 30, color: Colors.white),),
-          )
-        ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.pink,
+            ),
+
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.purple,
+            )
+          ],
+        )
       );
   }
 }

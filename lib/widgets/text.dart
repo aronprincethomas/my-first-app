@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 
 class MyWidget extends StatelessWidget {
@@ -34,30 +35,27 @@ class MyWidget extends StatelessWidget {
         ),
 
         body: Center(
-          child: Container(
-            //color: Colors.yellowAccent,
-            height: 300,
-            width: double.infinity,
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.all(20),
-            alignment:Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.purple,
-              border: Border.all(color: Colors.yellowAccent, width: 5),
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
+          child: Text("Learn Flutter",
+            style: TextStyle(
+              fontSize: 40,
+              color: Colors.green,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+              letterSpacing: 3,
+              wordSpacing: 10,
+              backgroundColor: Colors.yellowAccent,
+              shadows: [
+                Shadow(
                   color: Colors.black,
-                  offset:Offset(5, 5),
-                  blurRadius: 20
+                  offset: Offset(3, 3),
+                  blurRadius: 10,
                 )
               ]
 
             ),
-
-            child: Text("Hello World", style: TextStyle(fontSize: 30, color: Colors.white),),
-          )
-        ),
+          ),
+          
+        )
       );
   }
 }
