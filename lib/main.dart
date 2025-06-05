@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/widgets/text_field.dart';
+import 'package:my_first_app/widgets/image.dart';
 
 void main(){
   runApp(MyApp());
