@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/widgets/image.dart';
+import 'package:my_first_app/widgets/card.dart';
 
 void main(){
   runApp(MyApp());
