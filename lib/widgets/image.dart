@@ -49,7 +49,7 @@ class MyWidget extends StatelessWidget {
                   width: 300,
                   // color: Colors.redAccent,
                 child: Image.asset(
-                  'images/dog2.jpeg',
+                  'images/cats.jpeg',
                   fit: BoxFit.fitWidth,
                   ),
               ),*/
