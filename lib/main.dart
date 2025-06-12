@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/widgets/navigation.dart';
+import 'package:my_first_app/screens/Home.dart';
+import 'package:my_first_app/screens/Product.dart';
+import 'package:my_first_app/screens/About.dart';
 
 void main(){
   runApp(MyApp());
@@ -12,7 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Demo App",
-      home: MyWidget()
+      routes: {
+        '/':(context) => HomeWidget(),
+        '/Product':(context) => ProductScreen(),
+        '/About':(context) => AboutScreen(),
+      },
+      initialRoute: '/',
     );
   }
 }
