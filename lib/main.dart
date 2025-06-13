@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/screens/Home.dart';
-import 'package:my_first_app/screens/Product.dart';
-import 'package:my_first_app/screens/About.dart';
+import 'project1/home.dart';
+import 'project1/add.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main(){
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -15,9 +18,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Demo App",
       routes: {
-        '/':(context) => HomeWidget(),
-        '/Product':(context) => ProductScreen(),
-        '/About':(context) => AboutScreen(),
+        '/':(context) => HomePage(),
+        '/add':(context) => AddUser(),
       },
       initialRoute: '/',
     );
