@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'project1/home.dart';
 import 'project1/add.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'project1/update.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context) => HomePage(),
         '/add':(context) => AddUser(),
+        '/update':(context) => UpdateDonor(),
       },
       initialRoute: '/',
     );

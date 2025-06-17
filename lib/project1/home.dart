@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -81,7 +81,17 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         children: [
                           IconButton(
-                            onPressed: (){}, 
+                            onPressed: (){
+                              Navigator.pushNamed(
+                                context, '/update', 
+                                arguments: {
+                                  'name' : donorSnap['name'],
+                                  'phone' : donorSnap['phone'].toString(),
+                                  'group' : donorSnap['group'],
+                                  'id' : donorSnap.id,
+                                }
+                              );
+                            }, 
                             icon: Icon(Icons.edit), 
                             iconSize: 30,
                             color: Colors.blue,
