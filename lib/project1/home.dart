@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
 
       body: StreamBuilder(
-        stream: donor.snapshots(), 
+        stream: donor.orderBy('name').snapshots(),
         builder: (context, AsyncSnapshot snapshot) {
         if(snapshot.hasData){
           return ListView.builder(
